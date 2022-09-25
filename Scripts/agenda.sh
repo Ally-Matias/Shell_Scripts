@@ -1,5 +1,13 @@
 #!/bin/bash
 
+#desenvolver uma agenda em um script chamado agenda.sh que gerencie nomes e e-mails em um arquivo de texto.
+#Esse arquivo de texto deve ser chamado agenda.db e tem o seguinte formato:
+#(João Marcelo:joao.marcelo@ufc.br)
+#O script agenda.sh deve suportar três operações: adicionar, remover, listar.
+#A operação, os nomes e e-mails devem ser passados por parâmetros.
+#Além disso, o script deve avisar quando o arquivo agenda.db for criado pela primeira vez. 
+
+
 # Criei varias variaveis para guardar as expressões e entradas do usuario
 
 INPUT=$1
