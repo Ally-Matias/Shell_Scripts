@@ -19,17 +19,17 @@ cd dir$[x]  # Dois for aninhados e um case para criar os arquivos e diretorios n
 for i in {1..4};do # Do 1 ao 4 pois são 4 arquivos, cada um contendo uma quantidade de digitos diferentes, por isso o case.
 case $i in
  1)
-  echo '1' > arq$i.txt
-  ;;
+   echo '1' > arq$i.txt
+   ;;
  2)
-  echo -e '2\n2' > arq$i.txt
-  ;;
+   echo -e '2\n2' > arq$i.txt
+   ;;
  3)
-  echo -e '3\n3\n3' > arq$i.txt
-  ;;
+   echo -e '3\n3\n3' > arq$i.txt
+   ;;
  4)
-  echo -e '4\n4\n4\n4' > arq$i.txt
-  ;;
+   echo -e '4\n4\n4\n4' > arq$i.txt
+   ;;
 esac
 done
 cd ..
