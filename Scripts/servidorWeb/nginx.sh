@@ -10,8 +10,6 @@ systemctl enable nginx
 
 #anotações nginx
 
-#/usr/share/nginx/html/index.html  <- onde fica a pagina, só consigo alterar se estiver em super usuario
-
 # mudando o index para mudar o conteudo da pagina
 
 echo "Nome: Alliquison Matias.  Matricula: 508445" > /var/www/html/index.nginx-debian.html
