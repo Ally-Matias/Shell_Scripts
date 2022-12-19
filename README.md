@@ -6,7 +6,7 @@ Neste repositório eu uso as seguintes tecnologias:
 - Shell script
 - AWS ec2
 - Ngnix
-- Apache
+- Apache2
 - AWK
 - MySql
 - Wordpress
