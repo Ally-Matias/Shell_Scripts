@@ -12,6 +12,7 @@ dialog --msgbox "ATENÇÃO! Para este script funcionar, é necessário escrever 
 caminho=$(dialog --inputbox "Digite o caminho inteiro do diretório:" 10 90 --stdout)
 
 if [ $(echo $?) == "0" ];then # n apertou cancelar
+      #ls $caminho > arq.txt
       echo cd $caminho | ls > arq.txt
       dialog --msgbox "Seus arquivos a seguir, escolha qual vai querer compactar!" 10 30 --textbox arq.txt 70 50 --stdout
       dialog --inputbox "Qual o nome do arquivo que vai querer compactar?" 10 50 --stdout > lixo.txt " " >> arquivos.txt
@@ -25,10 +26,12 @@ if [ $(echo $?) == "0" ];then # n apertou cancelar
       nome=$(dialog --inputbox "Qual vai ser o nome do arquivo compactado?" 10 25 --stdout)
       dialog --msgbox "Para sua segurança, vou manter os seus arquivos originais!" 10 30 --stdout
       if [ $(echo $opcoes) = "1"  ];then #gzip
+         # | awk -v caminho=$caminho '{ printf("%s/%s\n", caminho, $1)}'
          gzip -kc $(cat arquivos.txt) > $nome.gz  # -k : compactar o arquivo e manter o arquio original. -c : escrever na saída padrão e redirecionar a saída para um arquivo 
          dialog --msgbox "O arquivo $nome.gz foi criado com sucesso!" 10 30 --stdout
          clear
       else                               #b2zip
+         # | awk -v caminho=$caminho '{ printf("%s/%s\n", caminho, $1)}'
          bzip2 -kc $(cat arquivos.txt) > $nome.bz2
          dialog --msgbox "O arquivo $nome.bz2 foi criado com sucesso!" 10 30 --stdout
          clear
